@@ -23,9 +23,7 @@ Without `KV_REST_API_URL`/`KV_REST_API_TOKEN` the API falls back to an in-memory
 
 ## Cron (the tick)
 
-`vercel.json` declares `* * * * *` → `/api/tick`. Vercel sends `Authorization: Bearer <CRON_SECRET>` automatically when `CRON_SECRET` is set.
-
-**Hobby plan crons only run once per day.** On Hobby, use cron-job.org instead:
+No Vercel cron is declared (Hobby rejects anything more frequent than daily). The tick is driven from outside, every minute, by cron-job.org (free):
 
 1. cron-job.org → Create cronjob → URL `https://<your-domain>/api/tick`
 2. Schedule: every 1 minute
@@ -53,3 +51,5 @@ npm i
 vercel dev
 ```
 `node lib/_selftest.js` runs the offline checks (wallet derivation, tiers, instruction building).
+
+On Vercel Pro you can instead add to vercel.json: `"crons":[{"path":"/api/tick","schedule":"* * * * *"}]` (Vercel then sends `Authorization: Bearer <CRON_SECRET>` itself).
