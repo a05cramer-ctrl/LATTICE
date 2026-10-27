@@ -1,1 +1,1 @@
-window.LATTICE_CFG={NAME:"LATTICE",TICKER:"LATTICE",CA:"",CHAIN:"solana",PAD:"pump.fun",PAIR:"",X:"",BUY:"",CHART:""}
+window.LATTICE_CFG={NAME:"LATTICE",TICKER:"LATTICE",CA:"BQuXVxk8XT7zSX4nMuYwR4JDB67GgVjHYxQAZidWpump",CHAIN:"solana",PAD:"pump.fun",PAIR:"",X:"https://x.com/latticeburn",BUY:"https://pump.fun/coin/BQuXVxk8XT7zSX4nMuYwR4JDB67GgVjHYxQAZidWpump",CHART:"https://gmgn.ai/sol/token/BQuXVxk8XT7zSX4nMuYwR4JDB67GgVjHYxQAZidWpump"}
