@@ -1,0 +1,23 @@
+{
+  "name": "lattice-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LATTICE - pump.fun fee-burn launchpad (Vercel Node functions, CommonJS)",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "check": "node --check api/state.js && node --check api/coin.js && node --check api/upload.js && node --check api/build-create.js && node --check api/confirm-launch.js && node --check api/tick.js && node --check lib/pump.js && node --check lib/wallets.js && node --check lib/kv.js && node --check lib/rpc.js && node --check lib/tiers.js && node --check lib/http.js",
+    "test": "node lib/_selftest.js"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@pump-fun/pump-sdk": "4.3.1",
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "@upstash/redis": "^1.35.0",
+    "@vercel/functions": "^3.3.3",
+    "bn.js": "^5.2.2",
+    "bs58": "^6.0.0"
+  }
+}

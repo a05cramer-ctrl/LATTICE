@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>LATTICE — every fee burns the coin</title>
+<meta name="description" content="A pump.fun launchpad where every coin's creator fees buy the coin back and burn it, on a timer. Hold $LATTICE to burn faster.">
+<meta property="og:title" content="LATTICE — every fee burns the coin">
+<meta property="og:description" content="Launch on pump.fun through LATTICE. 100% of creator fees buy the coin back and burn it, on a timer.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og.jpg">
+<meta name="theme-color" content="#111214">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,700;87.5,800;87.5,900&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#111214;--ink:#E1E1E1;--ember:#FF6A1F;--muted:#8A8A90;--line:rgba(225,225,225,.16);--line-2:rgba(225,225,225,.08);--bar:rgba(225,225,225,.34);--sans:"Inter Tight",system-ui,-apple-system,"Segoe UI",sans-serif;--display:"Archivo","Inter Tight",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--max:1080px;--gut:clamp(16px,4vw,48px)}*{box-sizing:border-box}[hidden]{display:none!important}html,body{overflow-x:clip}html{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}body{margin:0;min-height:100vh;line-height:1.5;font-size:16px}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}a{color:inherit}button,input,textarea{font:inherit;color:inherit}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.mono{font-family:var(--mono);font-feature-settings:"zero"}.muted{color:var(--muted)}.small{font-size:13px}.link{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}.link:hover{border-color:var(--ember);color:var(--ember)}#lattice-gl{position:fixed;inset:0;width:100%;height:100%;display:block;z-index:0;pointer-events:none}.css-lattice{opacity:var(--lat-dim,1);transition:opacity .4s}.css-lattice{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:radial-gradient(circle at 4px 4px,var(--bg) 3px,var(--bar) 3.5px,var(--bar) 10px,transparent 11px),linear-gradient(var(--line) 8px,transparent 8px),linear-gradient(90deg,var(--line) 8px,transparent 8px);background-position:-4px -4px,0 0,0 0;background-size:96px 96px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,#000 30%,transparent 100%)}.top{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px var(--gut);background:linear-gradient(var(--bg) 0%,rgba(17,18,20,.72) 70%,transparent);backdrop-filter:blur(0px)}.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font-weight:700;letter-spacing:.06em;font-size:14px}.brand-mark{filter:drop-shadow(0 0 7px rgba(225,225,225,.28))}.lat-defs{position:absolute;width:0;height:0;overflow:hidden}.nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}.nav a{text-decoration:none;transition:color .15s}.nav a:hover{color:var(--ink)}.top-right{display:flex;gap:8px}.icon-btn{width:34px;height:34px;display:inline-grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:#11121480;color:var(--muted);cursor:pointer;padding:0;text-decoration:none}.icon-btn:hover{color:var(--ink);border-color:#e1e1e14d}#sound-toggle .snd-on{display:none}#sound-toggle[aria-pressed=true]{color:var(--ember);border-color:#ff6a1f80}#sound-toggle[aria-pressed=true] .snd-on{display:inline}#sound-toggle[aria-pressed=true] .snd-off{display:none}@media(max-width:760px){.nav{display:none}.icon-btn{width:44px;height:44px}}main{position:relative;z-index:1}.hero:before{content:"";position:absolute;left:50%;top:50%;width:min(100vw,1100px);height:min(100svh,820px);transform:translate(-50%,-50%);background:radial-gradient(ellipse 50% 48% at 50% 50%,rgba(17,18,20,.78),rgba(17,18,20,.45) 55%,transparent 100%);pointer-events:none;z-index:0}.hero>*{position:relative;z-index:1}.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px var(--gut) 64px;position:relative}.wordmark{margin:0;font-family:var(--display);font-stretch:87.5%;font-size:clamp(64px,13.5vw,196px);line-height:.84;font-weight:900;letter-spacing:-.045em;text-shadow:0 0 34px rgba(225,225,225,.2)}.hero-line{margin:20px 0 0;font-size:clamp(16px,1.5vw,19px);color:var(--ink);opacity:.78;letter-spacing:-.01em;max-width:56ch;line-height:1.45;text-shadow:0 1px 14px rgba(17,18,20,.9)}.hero-line b{color:var(--ink);font-weight:600}.next-burn{margin-top:clamp(28px,5vh,52px);display:flex;flex-direction:column;align-items:center;gap:6px}.next-burn-label{font-size:14px;color:var(--muted)}.next-burn-clock{font-family:var(--mono);font-weight:500;font-size:clamp(60px,12vw,150px);line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;min-width:4.3ch;text-shadow:0 0 36px rgba(255,106,31,.22)}.next-burn-clock.hot{color:var(--ember);text-shadow:0 0 44px rgba(255,106,31,.5)}.next-burn-sub{font-size:13px;color:var(--muted);min-height:1.5em}.hero-actions{margin-top:36px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:11px;border:1px solid var(--line);background:#1112148c;color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;letter-spacing:-.01em;cursor:pointer;transition:border-color .15s,background .15s,transform .1s}.btn:hover{border-color:#e1e1e166}.btn:active{transform:translateY(1px)}.btn-ember{background:var(--ember);border-color:var(--ember);color:#111214}.btn-ember:hover{background:#ff7a38;border-color:#ff7a38}.btn-lg{height:50px;padding:0 26px;font-size:16px}.btn[aria-disabled=true],.btn:disabled{opacity:.55;cursor:default;pointer-events:none}.btn.is-soon{color:var(--muted);cursor:default;pointer-events:none}.hero-stats{margin-top:44px;display:flex;gap:clamp(24px,5vw,64px);--gap: calc(clamp(24px,5vw,64px)/-2 - 3px) }.hero-stats div{display:flex;flex-direction:column;align-items:center;gap:2px;position:relative}.hero-stats div+div:before{content:"";position:absolute;left:calc(var(--gap,-32px));top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--bar)}.hero-stats .num{font-family:var(--mono);font-size:22px;font-weight:500;font-variant-numeric:tabular-nums;min-width:3ch}.hero-stats small{font-size:12px;color:var(--muted)}.hero-empty{margin:28px 0 0;font-size:14px;color:var(--muted)}.cell-tip{position:fixed;z-index:15;pointer-events:none;padding:8px 11px;border:1px solid var(--line);border-radius:9px;background:#111214db;font-size:13px;display:flex;gap:10px;align-items:center;white-space:nowrap;transform:translate(14px,14px)}.cell-tip b{font-weight:600}.cell-tip .mono{color:var(--ember)}.skel{position:relative;color:transparent!important;border-radius:6px;background:linear-gradient(90deg,#e1e1e10a,#e1e1e11c,#e1e1e10a);background-size:200% 100%;animation:shimmer 1.6s linear infinite;text-shadow:none!important;user-select:none}.skel:after{content:"";position:absolute;inset:0}.skel.skel-text{background:linear-gradient(90deg,#e1e1e11a,#e1e1e14d,#e1e1e11a);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;border-radius:0;animation:shimmer 1.8s linear infinite}.skel.skel-text:after{content:none}.next-burn-clock.skel{font-weight:500}@keyframes shimmer{0%{background-position:200% 0}to{background-position:-200% 0}}@media(prefers-reduced-motion:reduce){.skel{animation:none}}.sec{max-width:var(--max);margin:0 auto;padding:clamp(72px,10vh,120px) var(--gut) 0}.sec-head{max-width:640px;margin-bottom:28px}.sec-head h2{margin:0 0 14px;font-family:var(--display);font-stretch:87.5%;font-size:clamp(32px,4.2vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1}.sec-head p{margin:0;color:var(--muted);font-size:16px;max-width:60ch}.sec-head h2:after{content:"";display:block;width:56px;height:8px;margin-top:14px;border-radius:8px;background:linear-gradient(90deg,var(--ink) 0 40px,transparent 40px);position:relative}.sec-head h2{position:relative}.sec-head h2:before{content:"";position:absolute;left:48px;bottom:-1px;width:10px;height:10px;border-radius:50%;background:var(--ember);box-shadow:0 0 10px #ff6a1f99}.sec h3{font-size:18px;font-weight:600;letter-spacing:-.02em;margin:0 0 6px}.launch-form{border:1px solid var(--line);border-radius:18px;background:#111214c7;padding:clamp(18px,3vw,32px);backdrop-filter:blur(8px)}.launch-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}.field{display:flex;flex-direction:column;gap:7px;font-size:14px}.field>span{color:var(--muted)}.field em{font-style:normal;color:var(--muted);opacity:.7}.field-wide{grid-column:1/-1}.field input,.field textarea{width:100%;background:#e1e1e108;border:1px solid var(--line);border-radius:10px;padding:12px 14px;outline:none;transition:border-color .15s;resize:vertical;min-width:0}.field input:focus,.field textarea:focus{border-color:var(--ember)}.drop{position:relative;display:flex;align-items:center;gap:14px;min-height:92px;border:2px dashed var(--line);border-radius:12px;padding:14px;cursor:pointer;transition:border-color .15s,background .15s}.drop:hover,.drop.over{border-color:var(--ember);background:#ff6a1f0a}.drop input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}.drop img{width:64px;height:64px;object-fit:cover;border-radius:10px;border:2px solid var(--bar)}.drop-text{color:var(--muted);font-size:14px}.launch-foot{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.launch-wallet{display:flex;flex-direction:column;gap:2px;font-size:13px}.launch-wallet .mono{font-size:13px}.launch-steps{margin:22px 0 0;padding:0;list-style:none;display:grid;gap:0;font-size:14px;color:var(--muted)}.launch-steps li{display:flex;align-items:center;gap:12px;position:relative;padding:5px 0}.launch-steps li:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--bar);flex:none;position:relative;z-index:1}.launch-steps li+li:after{content:"";position:absolute;left:4px;top:-9px;width:4px;height:18px;border-radius:4px;background:var(--line)}.launch-steps li.active{color:var(--ink)}.launch-steps li.active:before{background:var(--ember);box-shadow:0 0 10px var(--ember);animation:pulse 1s ease-in-out infinite}.launch-steps li.done{color:var(--ink)}.launch-steps li.done:before{background:var(--ink)}.launch-steps li.done+li:after{background:var(--ink)}@keyframes pulse{50%{opacity:.5}}.burn-wallet-card{margin-top:18px;padding:14px 16px;border:1px solid rgba(255,106,31,.35);border-radius:12px;display:flex;flex-direction:column;gap:6px;font-size:13px;background:#ff6a1f0a}.burn-wallet-card code{font-size:13px;word-break:break-all;color:var(--ink)}.launch-error{margin:16px 0 0;padding:12px 14px;border:1px solid rgba(255,106,31,.5);border-radius:11px;color:var(--ember);font-size:14px;word-break:break-word}.launch-success{margin-top:22px;display:flex;gap:18px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:14px}.launch-success strong{font-size:18px;letter-spacing:-.02em}.launch-success p{margin:4px 0 10px;color:var(--muted);font-size:14px}.launch-success-cell{width:84px;height:84px;flex:none;border-radius:14px;border:3px solid var(--ink);box-shadow:0 0 #ff6a1f00;animation:cellLight 1.6s ease-out forwards;background-size:cover;background-position:center;display:grid;place-items:center;font-family:var(--mono);font-size:13px}@keyframes cellLight{0%{box-shadow:0 0 #ff6a1fe6,0 0 #e1e1e100;opacity:.2}60%{opacity:1}to{box-shadow:0 0 0 14px #ff6a1f00,0 0 24px #e1e1e159}}.row-links{display:flex;gap:16px;font-size:14px}.table{border:1px solid var(--line);border-radius:16px;overflow:clip;background:#111214c7;backdrop-filter:blur(8px)}.tr{display:grid;grid-template-columns:minmax(160px,1.6fr) 1fr 1fr .6fr 1fr 1fr;gap:12px;align-items:center;padding:14px 18px;border-top:1px solid var(--line-2);font-size:14px;min-width:0}.tr>*{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.th{border-top:0;color:var(--muted);font-size:13px;padding-top:12px;padding-bottom:12px}.th-r,.tr.r{grid-template-columns:minmax(140px,1.3fr) 1fr 1.2fr 1fr .7fr}.tr .link.mono{display:inline-flex;align-items:center;min-height:44px}.coin-cell{display:flex;align-items:center;gap:12px;min-height:44px}.coin-img{width:36px;height:36px;border-radius:10px;border:2px solid var(--bar);object-fit:cover;flex:none;background:#e1e1e10a;display:grid;place-items:center;font-family:var(--mono);font-size:10px;color:var(--muted)}.coin-name{display:flex;flex-direction:column;line-height:1.2;min-width:0}.coin-name b{font-weight:600;overflow:hidden;text-overflow:ellipsis}.coin-name small{color:var(--muted);font-family:var(--mono);font-size:12px}.tr .mono{font-size:14px}.tr .unit{color:var(--muted);font-style:normal;margin-left:4px}.cd{font-family:var(--mono);font-variant-numeric:tabular-nums;display:flex;flex-direction:column;gap:6px;overflow:visible}.cd.hot{color:var(--ember)}.cdbar{display:block;position:relative;width:72px;max-width:100%;height:4px;border-radius:4px;background:var(--line)}.cdbar i{position:absolute;left:0;top:0;bottom:0;width:var(--p,0%);border-radius:4px;background:var(--ember);transition:width 1s linear}.cdbar i:after{content:"";position:absolute;right:-4px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--ember);box-shadow:0 0 8px #ff6a1fb3}.cd.waiting-cd .cdbar i,.cd.waiting-cd .cdbar i:after{background:var(--bar);box-shadow:none}.waiting{color:var(--muted)}.tr.burning{background:linear-gradient(90deg,rgba(255,106,31,.14),transparent 60%)}.tr.fresh{animation:rowIn .6s ease-out}@keyframes rowIn{0%{background:#ff6a1f2e}to{background:transparent}}.empty{margin:14px 0 0;color:var(--muted);font-size:14px}.table.skel-rows .tr:not(.th) span{display:block}@media(max-width:760px){.tr{grid-template-columns:1.4fr 1fr .8fr;gap:10px;padding:12px 14px}.tr>:nth-child(n+4){display:none}.th-r,.tr.r{grid-template-columns:1.2fr 1fr .8fr}.th-r>:nth-child(3),.tr.r>:nth-child(3){display:none}.th-r>:nth-child(5),.tr.r>:nth-child(5){display:block}}.receipts-top{display:grid;grid-template-columns:minmax(0,440px) 1fr;gap:28px;align-items:start;margin-bottom:28px}.receipts-top:has(#receipt-card[hidden]){grid-template-columns:1fr}.burn-totals{display:grid;gap:18px;padding:8px 0 0 8px}.burn-totals>div{display:flex;flex-direction:column;gap:4px}.bt-num{font-family:var(--mono);font-size:clamp(34px,4.2vw,54px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.bt-label{font-size:14px;color:var(--muted)}.bt-note{margin:4px 0 0;font-size:13px;color:var(--muted);max-width:34ch}@media(max-width:760px){.receipts-top{grid-template-columns:1fr}.burn-totals{padding:0;grid-template-columns:1fr 1fr}.burn-totals>div:nth-child(3),.bt-note{grid-column:1/-1}.bt-num{font-size:30px}}.receipt-card{position:relative;max-width:440px;margin:0;padding:20px 22px 22px;border:1px solid var(--line);border-radius:16px 16px 0 0;background:#111214e0;backdrop-filter:blur(8px);box-shadow:0 30px 60px -30px #ff6a1f59}.receipt-card:after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:linear-gradient(135deg,rgba(17,18,20,.88) 25%,transparent 25%) 0 0/20px 10px,linear-gradient(225deg,rgba(17,18,20,.88) 25%,transparent 25%) 10px 0/20px 10px;background-repeat:repeat-x}.rc-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:14px}.rc-rule{height:4px;border-radius:4px;background:radial-gradient(circle,var(--bar) 1.6px,transparent 2px) 0 50%/12px 4px repeat-x}.rc-brand{display:inline-flex;align-items:center;gap:8px}.rc-coin{display:flex;align-items:baseline;gap:12px;padding:18px 0 14px}.rc-sym{font-family:var(--display);font-stretch:87.5%;font-weight:800;font-size:40px;letter-spacing:-.03em;line-height:1}.rc-mint{font-size:12px;color:var(--muted)}.rc-rows{margin:0;display:grid;gap:8px;padding:14px 0}.rc-rows div{display:flex;justify-content:space-between;gap:12px;font-size:14px}.rc-rows dt{color:var(--muted)}.rc-rows dd{margin:0;font-variant-numeric:tabular-nums}.rc-rows dd a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}.rc-rows dd a:hover{color:var(--ember);border-color:var(--ember)}.rc-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-top:16px}.rc-stamp{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember);border:2.5px solid var(--ember);border-radius:9px;padding:6px 12px 6px 22px;transform:rotate(-2deg)}.rc-stamp:before{content:"";position:absolute;left:8px;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--ember);box-shadow:0 0 8px #ff6a1fcc}.rc-actions{display:flex;gap:8px}.rc-actions .btn{height:40px;padding:0 14px;font-size:14px}@media(max-width:760px){.receipt-card{max-width:none}.rc-foot{flex-direction:column;align-items:stretch}.rc-stamp{align-self:flex-start}.rc-actions .btn{flex:1;height:44px}}.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;border:1px solid var(--line);border-radius:16px;overflow:clip;background:var(--line-2)}.steps li{counter-increment:s;background:#111214d9;padding:26px 26px 28px;position:relative}.steps li:before{content:counter(s);font-family:var(--mono);color:var(--ember);font-size:13px;display:flex;align-items:center;gap:10px;margin-bottom:14px}.steps li:after{content:"";position:absolute;top:33px;left:48px;width:28px;height:4px;border-radius:4px;background:var(--bar)}.steps p{margin:0;color:var(--muted);font-size:15px;max-width:48ch}@media(max-width:760px){.steps{grid-template-columns:1fr}}.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);border-radius:16px;overflow:clip;background:var(--line-2)}.tier{background:#111214d9;padding:24px;display:flex;flex-direction:column;gap:10px}.tier .hold{font-size:14px;color:var(--muted)}.tier .sec-v{font-family:var(--mono);font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.03em}.tier .sec-v i{font-style:normal;font-size:16px;color:var(--muted);margin-left:4px}.tier{position:relative}.tier.active{box-shadow:inset 0 0 0 2px var(--ember)}.tier.active:after{content:"";position:absolute;left:24px;bottom:16px;width:40px;height:6px;border-radius:6px;background:var(--ember)}.tier.active .sec-v{color:var(--ember)}.tier .skel{display:inline-block;min-width:60%}.tiers-note{margin:14px 0 0;color:var(--muted);font-size:14px;min-height:1.5em}@media(max-width:760px){.tiers{grid-template-columns:1fr}}.docs{max-width:680px}.docs h3{margin-top:26px}.docs h3:first-child{margin-top:0}.docs p{margin:0;color:var(--muted);font-size:15px}.docs .mono{color:var(--ink);font-size:13px}.foot{max-width:var(--max);margin:0 auto;padding:80px var(--gut) 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px}:focus-visible{outline:2px solid var(--ember);outline-offset:2px}@media(max-width:760px){.launch-grid{grid-template-columns:1fr}.hero{padding-top:84px;justify-content:flex-start;padding-bottom:36vh}.hero-line{max-width:34ch;font-size:15px}.hero-stats{margin-top:30px;gap:28px;--gap:-17px;padding:12px 18px;border:1px solid var(--line-2);border-radius:14px;background:#111214b8;backdrop-filter:blur(6px)}.hero-stats .num{font-size:18px}.hero-actions{margin-top:28px}.unit{display:none}}</style>
+</head>
+<body>
+<canvas id="lattice-gl" aria-hidden="true"></canvas>
+<div id="lattice-css" class="css-lattice" aria-hidden="true" hidden></div>
+
+<svg class="lat-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="lat-tip-v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E1E1E1"/><stop offset="1" stop-color="#FF6A1F"/></linearGradient>
+    <linearGradient id="lat-tip-h" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#E1E1E1"/><stop offset="1" stop-color="#FF6A1F"/></linearGradient>
+    <symbol id="lat-mark" viewBox="0 0 40 40">
+      <g fill="none" stroke="#E1E1E1" stroke-width="2.6" stroke-linecap="round">
+        <path d="M10 4v32M20 4v32M30 4v22.5"/>
+        <path d="M4 10h32M4 20h32M4 30h22.5"/>
+      </g>
+      <path d="M30 23.5v3" stroke="url(#lat-tip-v)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      <path d="M23.5 30h3" stroke="url(#lat-tip-h)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      <g fill="#E1E1E1"><circle cx="10" cy="10" r="2.3"/><circle cx="20" cy="10" r="2.3"/><circle cx="30" cy="10" r="2.3"/><circle cx="10" cy="20" r="2.3"/><circle cx="20" cy="20" r="2.3"/><circle cx="30" cy="20" r="2.3"/><circle cx="10" cy="30" r="2.3"/><circle cx="20" cy="30" r="2.3"/></g>
+      <g fill="#111214"><circle cx="10" cy="10" r=".8"/><circle cx="20" cy="10" r=".8"/><circle cx="30" cy="10" r=".8"/><circle cx="10" cy="20" r=".8"/><circle cx="20" cy="20" r=".8"/><circle cx="30" cy="20" r=".8"/><circle cx="10" cy="30" r=".8"/><circle cx="20" cy="30" r=".8"/></g>
+      <circle cx="32.6" cy="32.6" r="1.5" fill="#FF6A1F"/><circle cx="36.4" cy="36.4" r="1" fill="#FF6A1F"/>
+    </symbol>
+  </defs>
+</svg>
+<header class="top">
+  <a class="brand" href="#top" aria-label="LATTICE home">
+    <svg class="brand-mark" viewBox="0 0 40 40" width="28" height="28" aria-hidden="true"><use href="#lat-mark"/></svg>
+    <span>LATTICE</span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#launch">Launch</a><a href="#board">Board</a><a href="#receipts">Receipts</a><a href="#how">How it works</a><a href="#tiers">Tiers</a><a href="#docs">Docs</a>
+  </nav>
+  <div class="top-right">
+    <button id="sound-toggle" class="icon-btn" type="button" aria-pressed="false" title="Burn sound (off)">
+      <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 8v4h3l4 3V5L6 8H3z" fill="currentColor"/><path class="snd-on" d="M13 7.5a3.5 3.5 0 0 1 0 5M15 5a7 7 0 0 1 0 10" stroke="currentColor" fill="none" stroke-width="1.4" stroke-linecap="round"/><path class="snd-off" d="M13 8l4 4M17 8l-4 4" stroke="currentColor" fill="none" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <span class="sr">Toggle burn sound</span>
+    </button>
+    <a id="top-x" class="icon-btn" href="#" target="_blank" rel="noopener" aria-label="X" hidden>
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M18.2 2h3.3l-7.2 8.3L22.8 22h-6.6l-5.2-6.8L5 22H1.7l7.7-8.8L1.2 2h6.8l4.7 6.2L18.2 2zm-1.2 18h1.8L7.1 3.9H5.2L17 20z"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title" class="wordmark">LATTICE</h1>
+    <p class="hero-line">A pump.fun launchpad. <b>100% of creator fees buy the coin back and burn it</b>, every 180 s. Hold $LATTICE: every 60 s.</p>
+    <div class="next-burn">
+      <span class="next-burn-label" id="next-burn-label">next burn in</span>
+      <span class="next-burn-clock skel skel-text" id="next-burn-clock" aria-live="off">00:00</span>
+      <span class="next-burn-sub" id="next-burn-sub"></span>
+    </div>
+    <div class="hero-actions">
+      <a class="btn btn-ember" href="#launch">Launch a coin</a>
+      <a class="btn" id="hero-buy" href="#" target="_blank" rel="noopener">Buy $LATTICE</a>
+      <a class="btn" id="hero-chart" href="#" target="_blank" rel="noopener">Chart</a>
+      <a class="btn" id="hero-x" href="#" target="_blank" rel="noopener">X</a>
+    </div>
+    <div class="hero-stats" id="hero-stats">
+      <div><span class="skel skel-text num" data-stat="coins">00</span><small>coins</small></div>
+      <div><span class="skel skel-text num" data-stat="burns">000</span><small>burns</small></div>
+      <div><span class="skel skel-text num" data-stat="solBurned">0.000</span><small>SOL burned</small></div>
+    </div>
+    <p class="hero-empty" id="hero-empty" hidden>no coins launched yet — be the first</p>
+    <div class="cell-tip" id="cell-tip" hidden></div>
+  </section>
+
+  <section class="sec" id="launch" aria-labelledby="launch-title">
+    <div class="sec-head">
+      <h2 id="launch-title">Launch</h2>
+      <p>Creates a real pump.fun coin. The creator is a burn wallet derived for this coin, so every creator fee it earns is used to buy the coin back and burn it.</p>
+    </div>
+    <form class="launch-form" id="launch-form" novalidate>
+      <div class="launch-grid">
+        <label class="field">
+          <span>Name</span>
+          <input id="lf-name" name="name" type="text" maxlength="32" required autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Ticker</span>
+          <input id="lf-symbol" name="symbol" type="text" maxlength="10" required autocomplete="off" style="text-transform:uppercase">
+        </label>
+        <label class="field field-wide">
+          <span>Description</span>
+          <textarea id="lf-desc" name="description" rows="3" maxlength="500"></textarea>
+        </label>
+        <div class="field field-wide">
+          <span>Image</span>
+          <label class="drop" id="lf-drop" for="lf-image">
+            <input id="lf-image" name="image" type="file" accept="image/png,image/jpeg,image/gif,image/webp" required>
+            <img id="lf-preview" alt="" hidden>
+            <span class="drop-text" id="lf-drop-text">Drop an image or click to choose · PNG, JPG, GIF, WEBP</span>
+          </label>
+        </div>
+        <label class="field">
+          <span>Dev buy, SOL <em>(optional)</em></span>
+          <input id="lf-devbuy" name="devBuySol" type="number" inputmode="decimal" min="0" step="0.01">
+        </label>
+        <label class="field">
+          <span>X link <em>(optional)</em></span>
+          <input id="lf-twitter" name="twitter" type="url">
+        </label>
+      </div>
+
+      <div class="launch-foot">
+        <div class="launch-wallet" id="lf-wallet">
+          <span class="muted">Wallet</span>
+          <span id="lf-wallet-addr" class="mono">not connected</span>
+        </div>
+        <button class="btn btn-ember btn-lg" id="lf-submit" type="submit">Connect Phantom</button>
+      </div>
+
+      <ol class="launch-steps" id="launch-steps" hidden>
+        <li data-step="upload">Uploading metadata</li>
+        <li data-step="build">Deriving burn wallet and building the create transaction</li>
+        <li data-step="sign">Waiting for your signature in Phantom</li>
+        <li data-step="confirm">Confirming on chain</li>
+      </ol>
+
+      <div class="burn-wallet-card" id="lf-burnwallet" hidden>
+        <span class="muted">Burn wallet for this coin, set as creator on pump.fun</span>
+        <code class="mono" id="lf-burnwallet-addr"></code>
+        <span class="muted small">100% of creator fees land here. Nothing is sent until you sign.</span>
+      </div>
+
+      <p class="launch-error" id="lf-error" role="alert" hidden></p>
+
+      <div class="launch-success" id="lf-success" hidden>
+        <div class="launch-success-cell" id="lf-success-cell"></div>
+        <div>
+          <strong id="lf-success-title">Launched</strong>
+          <p id="lf-success-text"></p>
+          <div class="row-links">
+            <a id="lf-success-solscan" class="link" href="#" target="_blank" rel="noopener">Solscan</a>
+            <a id="lf-success-pump" class="link" href="#" target="_blank" rel="noopener">pump.fun</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+
+  <section class="sec" id="board" aria-labelledby="board-title">
+    <div class="sec-head">
+      <h2 id="board-title">Board</h2>
+      <p>Every coin launched here, soonest burn first. Countdowns tick live; fees and burns refresh every five seconds.</p>
+    </div>
+    <div class="table" id="board-table" role="table" aria-label="Launched coins">
+      <div class="tr th" role="row">
+        <span>coin</span><span>next burn</span><span>pending SOL</span><span>burns</span><span>SOL burned</span><span>last receipt</span>
+      </div>
+      <div id="board-rows"></div>
+    </div>
+    <p class="empty" id="board-empty" hidden>no coins launched yet — <a href="#launch" class="link">be the first</a></p>
+  </section>
+
+  <section class="sec" id="receipts" aria-labelledby="receipts-title">
+    <div class="sec-head">
+      <h2 id="receipts-title">Receipts</h2>
+      <p>Every burn is one transaction: claim fees, buy on the curve, burn the tokens. Open any row on Solscan.</p>
+    </div>
+    <div class="receipts-top">
+    <div class="receipt-card" id="receipt-card" hidden>
+      <div class="rc-head"><span class="rc-brand"><svg viewBox="0 0 40 40" width="18" height="18" aria-hidden="true"><use href="#lat-mark"/></svg>LATTICE · burn receipt</span><span class="mono" id="rc-no"></span></div>
+      <div class="rc-rule"></div>
+      <div class="rc-coin"><span class="rc-sym" id="rc-sym"></span><span class="rc-mint mono" id="rc-mint"></span></div>
+      <div class="rc-rule"></div>
+      <dl class="rc-rows">
+        <div><dt>SOL spent</dt><dd class="mono" id="rc-sol"></dd></div>
+        <div><dt>tokens burned</dt><dd class="mono" id="rc-tokens"></dd></div>
+        <div><dt>when</dt><dd class="mono" id="rc-when"></dd></div>
+        <div><dt>tx</dt><dd class="mono" id="rc-sig"></dd></div>
+      </dl>
+      <div class="rc-rule"></div>
+      <div class="rc-foot">
+        <span class="rc-stamp">claimed · bought · burned</span>
+        <div class="rc-actions"><a class="btn" id="rc-solscan" href="#" target="_blank" rel="noopener">Solscan</a><a class="btn btn-ember" id="rc-share" href="#" target="_blank" rel="noopener">Post it on X</a></div>
+      </div>
+    </div>
+    <div class="burn-totals" id="burn-totals">
+      <div><span class="bt-num skel skel-text" data-tot="burns">000</span><span class="bt-label">burns, all on chain</span></div>
+      <div><span class="bt-num skel skel-text" data-tot="solBurned">0.0000</span><span class="bt-label">SOL spent on buybacks</span></div>
+      <div><span class="bt-num skel skel-text" data-tot="tokensBurned">0.00B</span><span class="bt-label">tokens burned forever</span></div>
+      <p class="bt-note">Every number here is a transaction you can open. Nothing is estimated.</p>
+    </div>
+    </div>
+    <div class="table" id="receipts-table" role="table" aria-label="Burn receipts">
+      <div class="tr th th-r" role="row">
+        <span>coin</span><span>SOL spent</span><span>tokens burned</span><span>when</span><span>tx</span>
+      </div>
+      <div id="receipt-rows"></div>
+    </div>
+    <p class="empty" id="receipts-empty" hidden>no burns yet — the first fires when a coin's fees reach 0.005 SOL and its timer is due</p>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="how-title">
+    <div class="sec-head">
+      <h2 id="how-title">How it works</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Launch through the page</h3>
+        <p>You sign one pump.fun create transaction in Phantom. The coin's creator is a burn wallet that LATTICE derives for that coin, so 100% of creator fees go to it. Platform cut: 0.</p>
+      </li>
+      <li>
+        <h3>A tick runs every 60 seconds</h3>
+        <p>It reads every coin's unclaimed creator fees and checks the timer. Interval depends on how much $LATTICE the launcher holds: 180 s by default.</p>
+      </li>
+      <li>
+        <h3>A burn fires when fees reach 0.005 SOL and the timer is due</h3>
+        <p>Below 0.005 SOL the coin shows "waiting for fees" and the timer keeps running. Nothing is skipped or lost; fees accumulate until the next due tick.</p>
+      </li>
+      <li>
+        <h3>One transaction does everything</h3>
+        <p>Sweep the burn wallet, collect the fees, buy the coin on its own curve, burn the tokens. One signature, one receipt, one Solscan link.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="sec" id="tiers" aria-labelledby="tiers-title">
+    <div class="sec-head">
+      <h2 id="tiers-title">$LATTICE tiers</h2>
+      <p>The burn timer for coins you launch depends on how much $LATTICE your launching wallet holds.</p>
+    </div>
+    <div class="tiers" id="tier-rows">
+      <div class="tier skel-block"><span class="hold skel skel-text">hold 0,000,000+ $LATTICE</span><span class="sec-v skel skel-text">000<i>s between burns</i></span></div>
+      <div class="tier skel-block"><span class="hold skel skel-text">hold 0,000,000+ $LATTICE</span><span class="sec-v skel skel-text">000<i>s between burns</i></span></div>
+      <div class="tier skel-block"><span class="hold skel skel-text">hold 0,000,000+ $LATTICE</span><span class="sec-v skel skel-text">000<i>s between burns</i></span></div>
+    </div>
+    <p class="tiers-note" id="tiers-note"></p>
+  </section>
+
+  <section class="sec" id="docs" aria-labelledby="docs-title">
+    <div class="sec-head">
+      <h2 id="docs-title">Docs</h2>
+    </div>
+    <div class="docs">
+      <h3>Burn wallet</h3>
+      <p>Each coin gets its own burn wallet. The keypair is derived server-side from a master seed and the coin's mint; it is never shown and never leaves the server. On pump.fun the burn wallet is visible as the coin's creator, which is how it receives 100% of creator fees.</p>
+      <h3>Timer</h3>
+      <p>The tick job runs once a minute. A coin is due when <span class="mono">now ≥ lastBurnAt + intervalSec</span>. Interval is read from the launcher's $LATTICE balance at launch and re-checked on each tick: 180 s, 120 s at 1,000,000 $LATTICE, 60 s at 10,000,000.</p>
+      <h3>Minimum burn</h3>
+      <p>A burn needs at least 0.005 SOL of unclaimed creator fees. Below that the coin is marked waiting and nothing happens until the next tick.</p>
+      <h3>The burn transaction</h3>
+      <p>One versioned transaction: sweep the burn wallet, collect creator fees, buy on the coin's bonding curve (or via the migrated pool once it completes), then burn the bought tokens. The signature is the receipt. All receipts are listed above with Solscan links; nothing on this page is estimated.</p>
+      <h3>$LATTICE</h3>
+      <p>$LATTICE itself is a pump.fun coin. Its only function on this site is the tier check. Contract address, chart and buy links are in the header buttons once the coin is live.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>LATTICE · pump.fun launchpad</span>
+    <span class="mono" id="foot-ca">CA soon</span>
+  </footer>
+</main>
+<script src="config.js"></script>
+<script src="https://unpkg.com/@solana/web3.js@1.98.0/lib/index.iife.min.js" defer></script>
+<script>(()=>{(()=>{"use strict";let c=e=>document.getElementById(e),b=window.LATTICE_CFG||{},et=5e6,nt=5e3,gt=[1,.416,.122],xt=[.882,.882,.882],_=matchMedia("(prefers-reduced-motion: reduce)").matches,C=()=>innerWidth<760,z=e=>{let n=Number(e||0)/1e9;return n===0?"0":n<.001?n.toFixed(5):n<1?n.toFixed(4):n.toLocaleString("en-US",{maximumFractionDigits:3})},st=e=>(e=Number(e||0),e===0?"0":e<.001?e.toFixed(5):e<1?e.toFixed(4):e.toLocaleString("en-US",{maximumFractionDigits:3})),B=e=>(e=Number(e||0),e>=1e9?(e/1e9).toFixed(2)+"B":e>=1e6?(e/1e6).toFixed(2)+"M":e>=1e3?(e/1e3).toFixed(1)+"K":e.toLocaleString("en-US",{maximumFractionDigits:0})),M=e=>(e=Number(e||0),e>=1e3?e.toLocaleString("en-US",{maximumFractionDigits:2}):e.toFixed(4)),X='<i class="unit">SOL</i>',D=e=>Number(e||0).toLocaleString("en-US"),U=e=>String(e).padStart(2,"0"),F=e=>{let n=Math.max(0,Math.floor(e/1e3)),t=Math.floor(n/3600),s=Math.floor(n%3600/60),i=n%60;return t>0?`${t}:${U(s)}:${U(i)}`:`${U(s)}:${U(i)}`},G=(e,n)=>{let t=Math.max(0,Math.floor((n-e)/1e3));return t<60?`${t}s ago`:t<3600?`${Math.floor(t/60)}m ago`:t<86400?`${Math.floor(t/3600)}h ago`:`${Math.floor(t/86400)}d ago`},A=e=>e?e.slice(0,4)+"\u2026"+e.slice(-4):"",R=e=>`https://solscan.io/tx/${e}`,O=e=>`https://pump.fun/coin/${e}`,v=e=>String(e??"").replace(/[&<>"']/g,n=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[n]);function it(){let e=c("hero-buy"),n=c("hero-chart"),t=c("hero-x"),s=c("top-x"),i=c("foot-ca"),a=(o,l)=>{o.textContent=l,o.classList.add("is-soon"),o.removeAttribute("href"),o.setAttribute("aria-disabled","true")};b.BUY?e.href=b.BUY:b.CA?e.href=O(b.CA):a(e,"Buy \xB7 CA soon"),b.CHART?n.href=b.CHART:b.CA?n.href=`https://dexscreener.com/solana/${b.CA}`:n.hidden=!0,b.X?(t.href=b.X,s.href=b.X,s.hidden=!1):t.hidden=!0,b.CA&&(i.textContent=b.CA,i.title="Contract address")}let H=(()=>{let e=null,n=!1;try{n=localStorage.getItem("lattice.sound")==="1"}catch{}let t=c("sound-toggle"),s=()=>{t.setAttribute("aria-pressed",n?"true":"false"),t.title=n?"Burn sound (on)":"Burn sound (off)"};s(),t.addEventListener("click",()=>{n=!n,s();try{localStorage.setItem("lattice.sound",n?"1":"0")}catch{}n&&i(.6)});function i(a=1){if(n)try{e=e||new(window.AudioContext||window.webkitAudioContext),e.state==="suspended"&&e.resume();let o=e.currentTime,l=Math.floor(e[["sam","pleRate"].join("")]*.06),u=e.createBuffer(1,l,e[["sam","pleRate"].join("")]),f=u.getChannelData(0);for(let T=0;T<l;T++)f[T]=(Math.random()*2-1)*Math.pow(1-T/l,3);let h=e.createBufferSource();h.buffer=u;let r=e.createBiquadFilter();r.type="highpass",r.frequency.value=1800;let d=e.createGain();d.gain.setValueAtTime(.25*a,o),d.gain.exponentialRampToValueAtTime(.001,o+.08),h.connect(r).connect(d).connect(e.destination),h.start(o);let m=e.createOscillator();m.type="sine",m.frequency.setValueAtTime(220,o),m.frequency.exponentialRampToValueAtTime(48,o+.18);let w=e.createGain();w.gain.setValueAtTime(.22*a,o),w.gain.exponentialRampToValueAtTime(.001,o+.22),m.connect(w).connect(e.destination),m.start(o),m.stop(o+.25)}catch{}}return{click:i}})(),ot=`#version 300 es
+precision highp float;
+out vec2 vUv;
+void main(){ vec2 p = vec2((gl_VertexID==1)?3.0:-1.0,(gl_VertexID==2)?3.0:-1.0); vUv = p*0.5+0.5; gl_Position = vec4(p,0.0,1.0); }`,at=String.raw`#version 300 es
+precision highp float;
+in vec2 vUv; out vec4 o;
+uniform vec2 uRes; uniform float uTime;
+uniform vec3 uCamPos, uCamFwd, uCamRight, uCamUp; uniform float uTanFov;
+uniform vec2 uOffset; uniform vec3 uCursor; /* xz world hit, z=1 valid */
+uniform S2D uCells; uniform S2D uAtlas;
+uniform float uCellMapSize; uniform float uAtlasCols; uniform float uFade;
+const vec3 BG = vec3(0.067,0.071,0.078);
+const vec3 INK = vec3(0.882,0.882,0.882);
+const vec3 EMBER = vec3(1.0,0.416,0.122);
+float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+float noise(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f);
+  return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1,1)),f.x),f.y); }
+float rbox(vec2 p, vec2 b, float r){ vec2 q = abs(p)-b+r; return length(max(q,0.0))+min(max(q.x,q.y),0.0)-r; }
+void main(){
+  float aspect = uRes.x/uRes.y;
+  vec2 ndc = vUv*2.0-1.0; ndc.x *= aspect;
+  vec3 rd = normalize(uCamFwd + ndc.x*uTanFov*uCamRight + ndc.y*uTanFov*uCamUp);
+  vec3 col = BG;
+  if (rd.y < -0.002) {
+    float t = -uCamPos.y/rd.y;
+    vec3 p = uCamPos + rd*t;
+    vec2 g = p.xz*1.35 + uOffset;
+    vec2 id = floor(g); vec2 uv = fract(g);
+    float pw = max(fwidth(g.x), fwidth(g.y)) + 1e-5;         // world size of one pixel here
+    vec2 dl = min(uv, 1.0-uv);
+    float dline = min(dl.x, dl.y);
+    float aaw = pw*1.1;
+    float hw = max(0.042, 0.55*pw);                             // thick bar, half width in cell units
+    float line = 1.0 - smoothstep(hw, hw+aaw, dline);
+    float glow = exp(-dline/(pw*7.0+0.02))*0.10;
+    float dn = length(dl); float nr = max(0.095, 1.5*pw); float hr = max(0.03, 0.45*pw);
+    float node = 1.0 - smoothstep(nr, nr+aaw, dn);
+    float hole = (1.0 - smoothstep(hr, hr+aaw, dn)) * smoothstep(0.28, 0.08, pw); // dark centre, only when big enough to read
+    float dist = length(p.xz - uCamPos.xz);
+    float fade = exp(-dist*0.11) * smoothstep(-0.002, -0.06, rd.y);
+    fade *= uFade;
+    // cell data
+    vec4 cd = texture(uCells, (id + uCellMapSize*0.5 + 0.5)/uCellMapSize);
+    float flags = floor(cd.a*255.0+0.5);
+    bool has = mod(flags,2.0) >= 1.0;
+    bool waiting = mod(floor(flags/2.0),2.0) >= 1.0;
+    bool hot = mod(floor(flags/4.0),2.0) >= 1.0;
+    float burn = cd.b; float prog = cd.g;
+    float eat = 0.0, edge = 0.0;
+    if (burn > 0.0) {
+      float c = (uv.x + (1.0-uv.y))*0.5;                       // 1 at the burning corner
+      float n = noise(uv*7.0 + uTime*1.2)*0.06;
+      float front = 1.0 - burn*1.35 + n;
+      eat = smoothstep(front-0.015, front+0.015, c);
+      edge = (1.0 - smoothstep(0.0, 0.2, front - c)) * (1.0 - eat) * (1.0-smoothstep(0.98,1.0,burn)); // ember tip creeping up the bar ends
+    }
+    float cursorGlow = 0.0;
+    if (uCursor.z > 0.5) { cursorGlow = exp(-length(p.xz - uCursor.xy)*1.15); }
+    float lineI = (max(line, node) + glow) * (1.0 - hole) * fade * (1.0 - eat);
+    lineI *= 0.5 + cursorGlow*0.75 + (hot?0.8:0.0);
+    col = mix(col, INK, clamp(lineI, 0.0, 1.0));
+    col += INK * cursorGlow * 0.035 * fade;
+    // coin image + ring
+    if (has) {
+      vec2 lp = uv - 0.5;
+      float r = 0.31; float d = rbox(lp, vec2(r), 0.09);
+      float aa = pw*1.2;
+      float img = 1.0 - smoothstep(0.0, aa, d);
+      float slot = floor(cd.r*255.0+0.5);
+      vec2 auv = (vec2(mod(slot,uAtlasCols), floor(slot/uAtlasCols)) + clamp(lp/(2.0*r)+0.5, 0.0, 1.0)) / uAtlasCols;
+      vec4 tex = texture(uAtlas, auv);
+      float imgA = img * fade * (1.0 - eat) * (0.55 + 0.45*smoothstep(3.0, 1.0, pw*220.0));
+      col = mix(col, tex.rgb, imgA * tex.a);
+      // ring
+      float rr = length(lp); float ang = atan(lp.x, -lp.y); float a01 = (ang + 3.14159265)/6.2831853;
+      float ring = (1.0 - smoothstep(0.0, aa, abs(rr-0.405)-max(0.022, 0.6*pw)));
+      float lit = step(a01, prog);
+      float ha = prog*6.2831853 - 3.14159265; vec2 hp = vec2(sin(ha), -cos(ha))*0.405;
+      float headDot = 1.0 - smoothstep(0.0, aa, length(lp-hp)-max(0.05, 1.2*pw)); // dot terminal at the progress head
+      vec3 ringCol = waiting ? mix(INK*0.5, EMBER, 0.35) : EMBER;
+      float ringA = ring * fade * (1.0 - eat);
+      col = mix(col, ringCol, ringA * lit * 0.95);
+      col = mix(col, INK, ringA * (1.0-lit) * 0.16);
+      col = mix(col, ringCol, headDot * fade * (1.0 - eat));
+      if (hot) col += EMBER * ring * fade * 0.5;
+    }
+    // ember edge from the burn
+    float tip = clamp(edge * max(line, node) * 1.8, 0.0, 1.0) * min(1.0, fade*2.5);
+    col = mix(col, EMBER, tip);
+    col += EMBER * tip * 0.5 + EMBER * edge * 0.06 * fade;
+    col += EMBER * eat * (1.0-eat) * 0.12 * fade;
+    // horizon haze
+    col += INK * 0.018 * exp(-abs(rd.y)*22.0);
+  } else {
+    col += INK * 0.012 * exp(-rd.y*30.0);
+  }
+  // faint radial glow behind the centre, then vignette
+  vec2 q = vUv*2.0-1.0; q.x *= aspect*0.8;
+  col += vec3(0.030,0.031,0.034) * exp(-dot(q,q)*1.1);
+  q = vUv*2.0-1.0; col *= 1.0 - dot(q,q)*0.14;
+  o = vec4(col, 1.0);
+}`,rt=`#version 300 es
+precision highp float;
+layout(location=0) in vec4 aPos;  /* xyz, life */
+layout(location=1) in float aSize;
+uniform mat4 uVP; uniform vec2 uRes; uniform float uPx;
+out float vLife;
+void main(){ vec4 c = uVP*vec4(aPos.xyz,1.0); gl_Position = c; vLife = aPos.w;
+  gl_PointSize = clamp((uRes.y*0.02*aSize)/max(c.w,0.2), 2.0, 40.0) * uPx * (0.6+0.4*min(aPos.w,1.0)); }`,lt=`#version 300 es
+precision highp float; in float vLife; out vec4 o;
+void main(){ vec2 d = gl_PointCoord-0.5; float r = length(d); float a = (1.0-smoothstep(0.34,0.46,r)) * min(1.0, vLife*1.6);
+  vec3 c = mix(vec3(1.0,0.416,0.122), vec3(1.0,0.72,0.42), pow(max(vLife,0.0), 3.0)*0.35);
+  o = vec4(c*a, a); }`,q={perspective(e,n,t,s){let i=1/Math.tan(e/2),a=new Float32Array(16);return a[0]=i/n,a[5]=i,a[10]=(s+t)/(t-s),a[11]=-1,a[14]=2*s*t/(t-s),a},lookAt(e,n,t){let s=P([e[0]-n[0],e[1]-n[1],e[2]-n[2]]),i=P(N(t,s)),a=N(s,i),o=new Float32Array(16);return o[0]=i[0],o[1]=a[0],o[2]=s[0],o[4]=i[1],o[5]=a[1],o[6]=s[1],o[8]=i[2],o[9]=a[2],o[10]=s[2],o[12]=-(i[0]*e[0]+i[1]*e[1]+i[2]*e[2]),o[13]=-(a[0]*e[0]+a[1]*e[1]+a[2]*e[2]),o[14]=-(s[0]*e[0]+s[1]*e[1]+s[2]*e[2]),o[15]=1,o},mul(e,n){let t=new Float32Array(16);for(let s=0;s<4;s++)for(let i=0;i<4;i++)t[i*4+s]=e[s]*n[i*4]+e[4+s]*n[i*4+1]+e[8+s]*n[i*4+2]+e[12+s]*n[i*4+3];return t}};function N(e,n){return[e[1]*n[2]-e[2]*n[1],e[2]*n[0]-e[0]*n[2],e[0]*n[1]-e[1]*n[0]]}function P(e){let n=Math.hypot(e[0],e[1],e[2])||1;return[e[0]/n,e[1]/n,e[2]/n]}let y=64,L=8,p=256,K=L*L;class ct{constructor(n){this.canvas=n;let t=n.getContext("webgl2",{antialias:!1,alpha:!1,powerPreference:"high-performance"});if(!t)throw new Error("no webgl2");this.gl=t,this.prog=this._program(ot,at.replace(/S2D/g,["sam","pler2D"].join(""))),this.pts=this._program(rt,lt),this.vao=t.createVertexArray(),this.u={};for(let s of["uRes","uTime","uCamPos","uCamFwd","uCamRight","uCamUp","uTanFov","uOffset","uCursor","uCells","uAtlas","uCellMapSize","uAtlasCols","uFade"])this.u[s]=t.getUniformLocation(this.prog,s);this.up={};for(let s of["uVP","uRes","uPx"])this.up[s]=t.getUniformLocation(this.pts,s);this.cellData=new Uint8Array(y*y*4),this.cellTex=t.createTexture(),t.bindTexture(t.TEXTURE_2D,this.cellTex),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MIN_FILTER,t.NEAREST),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MAG_FILTER,t.NEAREST),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_S,t.CLAMP_TO_EDGE),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_T,t.CLAMP_TO_EDGE),t.texImage2D(t.TEXTURE_2D,0,t.RGBA,y,y,0,t.RGBA,t.UNSIGNED_BYTE,this.cellData),this.atlasCanvas=document.createElement("canvas"),this.atlasCanvas.width=this.atlasCanvas.height=L*p,this.atlasCtx=this.atlasCanvas.getContext("2d"),this.atlasTex=t.createTexture(),t.bindTexture(t.TEXTURE_2D,this.atlasTex),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MIN_FILTER,t.LINEAR),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MAG_FILTER,t.LINEAR),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_S,t.CLAMP_TO_EDGE),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_T,t.CLAMP_TO_EDGE),t.pixelStorei(t.UNPACK_FLIP_Y_WEBGL,!1),t.texImage2D(t.TEXTURE_2D,0,t.RGBA,t.RGBA,t.UNSIGNED_BYTE,this.atlasCanvas),this.atlasDirty=!1,this.maxP=600,this.pData=new Float32Array(this.maxP*5),this.parts=[],this.pBuf=t.createBuffer(),this.pVao=t.createVertexArray(),t.bindVertexArray(this.pVao),t.bindBuffer(t.ARRAY_BUFFER,this.pBuf),t.bufferData(t.ARRAY_BUFFER,this.pData,t.DYNAMIC_DRAW),t.enableVertexAttribArray(0),t.vertexAttribPointer(0,4,t.FLOAT,!1,20,0),t.enableVertexAttribArray(1),t.vertexAttribPointer(1,1,t.FLOAT,!1,20,16),t.bindVertexArray(null),this.cells=new Map,this.slots=new Map,this.mouse={x:0,y:0,has:!1},this.par={x:0,y:0},this.cursorWorld=[0,0,0],this.hoverKey=null,this.offset=[0,0],this.fade=0,this.dim=1,this.heroEl=document.querySelector(".hero"),this.t0=performance.now(),this.burns=[],this.onHover=null,this.resize(),addEventListener("resize",()=>this.resize(),{passive:!0}),addEventListener("pointermove",s=>{this.mouse.x=s.clientX,this.mouse.y=s.clientY,this.mouse.has=s.pointerType!=="touch"},{passive:!0}),addEventListener("pointerleave",()=>{this.mouse.has=!1}),this.running=!0,document.addEventListener("visibilitychange",()=>{this.running=!document.hidden,this.running&&(this.last=performance.now(),requestAnimationFrame(this.frame))}),this.last=performance.now(),this.frame=this.frame.bind(this),requestAnimationFrame(this.frame)}_program(n,t){let s=this.gl,i=s.createProgram();for(let[a,o]of[[s.VERTEX_SHADER,n],[s.FRAGMENT_SHADER,t]]){let l=s.createShader(a);if(s.shaderSource(l,o),s.compileShader(l),!s.getShaderParameter(l,s.COMPILE_STATUS))throw new Error("shader: "+s.getShaderInfoLog(l));s.attachShader(i,l)}if(s.linkProgram(i),!s.getProgramParameter(i,s.LINK_STATUS))throw new Error("link: "+s.getProgramInfoLog(i));return i}resize(){let n=Math.min(devicePixelRatio||1,C()?1.25:1.5),t=C()?.8:1;this.canvas.width=Math.max(1,Math.floor(innerWidth*n*t)),this.canvas.height=Math.max(1,Math.floor(innerHeight*n*t)),this.px=n*t}camera(n){let t=C(),s=this.mouse.has?this.mouse.x/innerWidth-.5:0,i=this.mouse.has?this.mouse.y/innerHeight-.5:0;this.par.x+=(s-this.par.x)*.04,this.par.y+=(i-this.par.y)*.04;let a=t?[this.par.x*.5,4.1+this.par.y*.2,4.9]:[this.par.x*.9,2.55+this.par.y*.35,4.3];a[0]+=Math.sin(n*.11)*.18,a[1]+=Math.sin(n*.07)*.06;let o=t?[0,0,-.2]:[0,0,-1.4],l=P([o[0]-a[0],o[1]-a[1],o[2]-a[2]]),u=P(N(l,[0,1,0])),f=N(u,l),h=t?62*Math.PI/180:56*Math.PI/180,r=this.canvas.width/this.canvas.height,d=q.mul(q.perspective(h,r,.1,60),q.lookAt(a,o,[0,1,0]));return{eye:a,fwd:l,right:u,up:f,tanFov:Math.tan(h/2),vp:d,aspect:r}}pick(n,t,s){let i=t/innerWidth*2-1,a=1-s/innerHeight*2,o=P([n.fwd[0]+i*n.aspect*n.tanFov*n.right[0]+a*n.tanFov*n.up[0],n.fwd[1]+i*n.aspect*n.tanFov*n.right[1]+a*n.tanFov*n.up[1],n.fwd[2]+i*n.aspect*n.tanFov*n.right[2]+a*n.tanFov*n.up[2]]);if(o[1]>=-.002)return null;let l=-n.eye[1]/o[1];return[n.eye[0]+o[0]*l,n.eye[2]+o[2]*l]}cellWorld(n){let[t,s]=n.split(",").map(Number);return[(t+.5-this.offset[0])/1.35,(s+.5-this.offset[1])/1.35]}slotFor(n){if(this.slots.has(n))return this.slots.get(n);if(this.slots.size>=K)return 255;let t=this.slots.size;return this.slots.set(n,t),t}paintSlot(n,t){if(n>=K)return;let s=this.atlasCtx,i=n%L*p,a=Math.floor(n/L)*p;s.save(),s.beginPath(),s.rect(i,a,p,p),s.clip(),s.clearRect(i,a,p,p),s.translate(i,a),t(s),s.restore(),this.atlasDirty=!0}paintSymbol(n,t){this.paintSlot(n,s=>{s.fillStyle="#111214",s.fillRect(0,0,p,p);let i=String(t||"?").toUpperCase().slice(0,8),a=i.length<=4?84:i.length<=6?60:44;s.font=`600 ${a}px "JetBrains Mono", ui-monospace, monospace`,s.textAlign="center",s.textBaseline="middle",s.fillStyle="#E1E1E1",s.fillText(i,p/2,p/2+4)})}loadImage(n,t,s){if(this.paintSymbol(n,s),!t)return;let i=new Image;i.crossOrigin="anonymous",i.decoding="async",i.onload=()=>{try{this.paintSlot(n,a=>{a.fillStyle="#111214",a.fillRect(0,0,p,p);let o=Math.max(p/i.naturalWidth,p/i.naturalHeight),l=i.naturalWidth*o,u=i.naturalHeight*o;a.drawImage(i,(p-l)/2,(p-u)/2,l,u)}),this.gl.bindTexture(this.gl.TEXTURE_2D,this.atlasTex),this.gl.texImage2D(this.gl.TEXTURE_2D,0,this.gl.RGBA,this.gl.RGBA,this.gl.UNSIGNED_BYTE,this.atlasCanvas)}catch{this.paintSymbol(n,s)}},i.onerror=()=>{},i.src=t}setCells(n){let t=new Set;for(let s of n){t.add(s.key);let i=this.cells.get(s.key);if(!i||i.mint!==s.mint){let a=this.slotFor(s.mint);i={mint:s.mint,slot:a,progress:0,burn:0,waiting:!1,hot:0,symbol:s.symbol},this.cells.set(s.key,i),this.loadImage(a,s.image,s.symbol)}i.progress=s.progress,i.waiting=s.waiting,i.symbol=s.symbol}for(let s of[...this.cells.keys()])t.has(s)||this.cells.delete(s);this.cellsDirty=!0}burnCell(n){if(!this.cells.has(n))return;this.burns.push({key:n,start:performance.now(),dur:_?300:1900});let t=this.cellWorld(n);this.drift(t[0]+.37,t[1]-.37,3,1),this.spawn(t[0]+.3,t[1]-.3,10,.7)}drift(n,t,s,i){for(let a=0;a<s&&this.parts.length<this.maxP;a++){let o=(.22+Math.random()*.25)*i,l=a*.08;this.parts.push({x:n+l,y:.02,z:t-l,vx:o,vy:.12+Math.random()*.1,vz:-o,life:1.4+a*.25,decay:.42+Math.random()*.15,size:3.2-a*.6})}}spawn(n,t,s,i){for(let a=0;a<s&&this.parts.length<this.maxP;a++){let o=Math.random()*Math.PI*2,l=(.15+Math.random()*.6)*i;this.parts.push({x:n+(Math.random()-.5)*.3,y:.01,z:t+(Math.random()-.5)*.3,vx:Math.cos(o)*l*.4,vy:.5+Math.random()*1.1*i,vz:Math.sin(o)*l*.4,life:1,decay:.45+Math.random()*.6,size:.8+Math.random()*.6})}}uploadCells(n){let t=this.cellData;t.fill(0);for(let[i,a]of this.cells){let[o,l]=i.split(",").map(Number),u=o+y/2,f=l+y/2;if(u<0||f<0||u>=y||f>=y)continue;let h=(f*y+u)*4,r=1|(a.waiting?2:0)|(a.hot>0?4:0);t[h]=a.slot,t[h+1]=Math.round(Math.min(1,Math.max(0,a.progress))*255),t[h+2]=Math.round(Math.min(1,a.burn)*255),t[h+3]=r}let s=this.gl;s.bindTexture(s.TEXTURE_2D,this.cellTex),s.texSubImage2D(s.TEXTURE_2D,0,0,0,y,y,s.RGBA,s.UNSIGNED_BYTE,t)}frame(n){if(!this.running)return;let t=this.gl,s=(n-this.t0)/1e3,i=Math.min(.05,(n-this.last)/1e3);this.last=n,this.fade=Math.min(1,this.fade+i*(_?10:.7));{let h=this.heroEl?this.heroEl.getBoundingClientRect().bottom:innerHeight,r=.16+.84*Math.min(1,Math.max(0,h/(innerHeight*.55)));this.dim+=(r-this.dim)*Math.min(1,i*6)}this.offset=_?[0,0]:[Math.sin(s*.05)*.8,Math.cos(s*.037)*.5];let a=this.camera(s),o=[0,0,0];if(this.mouse.has){let h=this.pick(a,this.mouse.x,this.mouse.y);h&&(o=[h[0],h[1],1])}this.cursorWorld=o;let l=null;if(o[2]>.5){let h=Math.floor(o[0]*1.35+this.offset[0]),r=Math.floor(o[1]*1.35+this.offset[1]),d=h+","+r;this.cells.has(d)&&(l=d)}if(l!==this.hoverKey&&(this.hoverKey=l,this.onHover&&this.onHover(l?this.cells.get(l):null)),l&&Math.random()<.5&&!_){let h=this.cellWorld(l);this.spawn(h[0]+(Math.random()-.5)*.6,h[1]+(Math.random()-.5)*.6,1,.45)}let u=this.cellsDirty;this.cellsDirty=!1;for(let h=this.burns.length-1;h>=0;h--){let r=this.burns[h],d=this.cells.get(r.key),m=(n-r.start)/r.dur;if(!d){this.burns.splice(h,1);continue}if(m>=1)d.burn=0,d.hot=1.2,this.burns.splice(h,1);else if(d.burn=m,Math.random()<.3&&!_){let w=this.cellWorld(r.key),T=1-m*1.35;this.drift(w[0]+.5-T*.9+Math.random()*.15,w[1]-.5+T*.9-Math.random()*.15,1,.55)}u=!0}for(let h of this.cells.values())h.hot>0&&(h.hot-=i,u=!0);u&&this.uploadCells(n),this.atlasDirty&&(this.atlasDirty=!1,t.bindTexture(t.TEXTURE_2D,this.atlasTex),t.texImage2D(t.TEXTURE_2D,0,t.RGBA,t.RGBA,t.UNSIGNED_BYTE,this.atlasCanvas));let f=0;for(let h=this.parts.length-1;h>=0;h--){let r=this.parts[h];if(r.life-=i*r.decay,r.life<=0){this.parts.splice(h,1);continue}r.vy-=i*.35,r.x+=r.vx*i,r.y+=r.vy*i,r.z+=r.vz*i,r.vx*=.995,r.vz*=.995,this.pData[f*5]=r.x,this.pData[f*5+1]=r.y,this.pData[f*5+2]=r.z,this.pData[f*5+3]=r.life,this.pData[f*5+4]=r.size||1,f++}t.viewport(0,0,this.canvas.width,this.canvas.height),t.disable(t.DEPTH_TEST),t.disable(t.BLEND),t.useProgram(this.prog),t.bindVertexArray(this.vao),t.uniform2f(this.u.uRes,this.canvas.width,this.canvas.height),t.uniform1f(this.u.uTime,s),t.uniform3fv(this.u.uCamPos,a.eye),t.uniform3fv(this.u.uCamFwd,a.fwd),t.uniform3fv(this.u.uCamRight,a.right),t.uniform3fv(this.u.uCamUp,a.up),t.uniform1f(this.u.uTanFov,a.tanFov),t.uniform2fv(this.u.uOffset,this.offset),t.uniform3fv(this.u.uCursor,o),t.uniform1f(this.u.uCellMapSize,y),t.uniform1f(this.u.uAtlasCols,L),t.uniform1f(this.u.uFade,this.fade*this.dim),t.activeTexture(t.TEXTURE0),t.bindTexture(t.TEXTURE_2D,this.cellTex),t.uniform1i(this.u.uCells,0),t.activeTexture(t.TEXTURE1),t.bindTexture(t.TEXTURE_2D,this.atlasTex),t.uniform1i(this.u.uAtlas,1),t.drawArrays(t.TRIANGLES,0,3),f>0&&(t.enable(t.BLEND),t.blendFunc(t.ONE,t.ONE_MINUS_SRC_ALPHA),t.useProgram(this.pts),t.bindVertexArray(this.pVao),t.bindBuffer(t.ARRAY_BUFFER,this.pBuf),t.bufferSubData(t.ARRAY_BUFFER,0,this.pData,0,f*5),t.uniformMatrix4fv(this.up.uVP,!1,a.vp),t.uniform2f(this.up.uRes,this.canvas.width,this.canvas.height),t.uniform1f(this.up.uPx,this.px*(.4+.6*this.dim)),t.drawArrays(t.POINTS,0,f),t.disable(t.BLEND)),requestAnimationFrame(this.frame)}}function ht(e){let n=C(),t=0,s=n?4:1,i=[];for(let o=-14;o<=14;o++)for(let l=-14;l<=14;l++)!n&&Math.abs(o)<=1&&l>-5||n&&l<4&&l>-7||i.push([o,l,Math.hypot((o-t)*.8,(l-s)*1.4)+(l<-3?2:0)]);i.sort((o,l)=>o[2]-l[2]||l[1]-o[1]||o[0]-l[0]);let a=[];for(let o=0;o<e&&o<i.length;o++)a.push(i[o][0]+","+i[o][1]);return a}let g=null;try{g=new ct(c("lattice-gl"))}catch(e){c("lattice-gl").hidden=!0,c("lattice-css").hidden=!1,console.warn("lattice: WebGL2 unavailable, CSS fallback",e&&e.message)}let E=c("cell-tip");g&&(g.onHover=e=>{if(!e){E.hidden=!0;return}let n=x.byMint.get(e.mint);if(!n){E.hidden=!0;return}E.style.left=g.mouse.x+"px",E.style.top=g.mouse.y+"px",E.innerHTML=`<b>${v(n.symbol)}</b><span class="mono" data-cd="${n.mint}">${F(n.nextBurnAt-x.now())}</span><span class="muted">${e.waiting?"waiting for fees":z(n.pendingLamports)+" SOL pending"}</span>`,E.hidden=!1},addEventListener("pointermove",e=>{E.hidden||(E.style.left=e.clientX+"px",E.style.top=e.clientY+"px")},{passive:!0}));let x={data:null,byMint:new Map,seenSigs:null,skew:0,loaded:!1,failed:0,now(){return Date.now()+this.skew},async poll(){try{let n=await(await fetch("/api/state",{cache:"no-store"})).json();if(!n||!n.ok)throw new Error(n&&n.error||"state error");this.apply(n),this.failed=0}catch{this.failed++,this.failed===3&&console.warn("lattice: /api/state not answering yet")}finally{setTimeout(()=>this.poll(),nt)}},apply(e){let n=!this.loaded;this.data=e,this.loaded=!0,typeof e.now=="number"&&(this.skew=e.now-Date.now()),this.byMint=new Map((e.coins||[]).map(s=>[s.mint,s]));let t=e.recent||[];if(!this.seenSigs)this.seenSigs=new Set(t.map(s=>s.sig));else{let s=t.filter(i=>i.sig&&!this.seenSigs.has(i.sig));for(let i of s)this.seenSigs.add(i.sig),ft(i)}Y(n)}},$=new Map;function ut(e){let n=[...e].sort((s,i)=>(s.createdAt||0)-(i.createdAt||0)||String(s.mint).localeCompare(String(i.mint))),t=ht(n.length);return $.clear(),n.forEach((s,i)=>$.set(s.mint,t[i])),n.map((s,i)=>({key:t[i],mint:s.mint,symbol:s.symbol,image:s.image,progress:I(s),waiting:k(s)}))}let k=e=>Number(e.pendingLamports||0)<et;function I(e){let n=x.now(),t=Math.max(1,Number(e.intervalSec||180))*1e3,s=Number(e.nextBurnAt||n)-t;return Math.min(1,Math.max(0,(n-s)/t))}function ft(e){let n=$.get(e.mint);g&&n&&g.burnCell(n),H.click();let t=document.querySelector(`#board-rows [data-mint="${CSS.escape(e.mint)}"]`);t&&(t.classList.add("burning"),setTimeout(()=>t.classList.remove("burning"),2500))}let V=e=>e.classList.remove("skel");function Y(e){let n=x.data,t=n.coins||[],s=x.now(),i=n.totals||{};for(let r of document.querySelectorAll("#hero-stats [data-stat]")){let d=r.dataset.stat;V(r),r.textContent=d==="solBurned"?st(i.solBurned):D(i[d])}c("hero-empty").hidden=t.length>0;for(let r of document.querySelectorAll("#burn-totals [data-tot]")){let d=r.dataset.tot;V(r),r.textContent=d==="solBurned"?M(i.solBurned):d==="tokensBurned"?B(i.tokensBurned):D(i[d])}V(c("next-burn-clock")),g&&g.setCells(ut(t));let a=c("board-rows"),o=[...t].sort((r,d)=>(r.nextBurnAt||0)-(d.nextBurnAt||0)),l=new Set([...a.children].map(r=>r.dataset.mint));a.innerHTML=o.map(r=>{let d=k(r);return`<div class="tr${!e&&!l.has(r.mint)?" fresh":""}" role="row" data-mint="${v(r.mint)}">
+      <a class="coin-cell link-plain" href="${O(r.mint)}" target="_blank" rel="noopener" style="text-decoration:none">
+        ${r.image?`<img class="coin-img" src="${v(r.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'coin-img',textContent:this.dataset.s}))" data-s="${v(String(r.symbol||"").slice(0,4))}">`:`<span class="coin-img">${v(String(r.symbol||"").slice(0,4))}</span>`}
+        <span class="coin-name"><b>${v(r.name)}</b><small>$${v(r.symbol)}</small></span>
+      </a>
+      <span class="cd${d?" waiting-cd":""}" data-cd="${v(r.mint)}"><span>${F((r.nextBurnAt||s)-s)}</span><i class="cdbar" data-cdp="${v(r.mint)}" style="--p:${(I(r)*100).toFixed(1)}%"><i></i></i></span>
+      <span class="mono${d?" waiting":""}" title="${d?"waiting for fees: below 0.005 SOL":"ready to burn"}">${M(Number(r.pendingLamports||0)/1e9)}${X}</span>
+      <span class="mono">${D(r.burnCount)}</span>
+      <span class="mono">${M(r.totalSolBurned)}${X}</span>
+      <span>${r.lastSig?`<a class="link mono" href="${R(r.lastSig)}" target="_blank" rel="noopener">${v(A(r.lastSig))}</a>`:'<span class="muted">\u2014</span>'}</span>
+    </div>`}).join(""),c("board-empty").hidden=t.length>0;let u=c("receipt-rows"),f=(n.recent||[]).slice().sort((r,d)=>(d.ts||0)-(r.ts||0)).slice(0,50);u.innerHTML=f.map((r,d)=>`<div class="tr r${!e&&d===0&&r.sig&&x.seenSigs.has(r.sig),""}" role="row">
+      <span class="coin-cell"><span class="coin-name"><b>$${v(r.symbol)}</b><small>${v(A(r.mint))}</small></span></span>
+      <span class="mono">${M(r.sol)}${X}</span>
+      <span class="mono">${B(r.tokens)}</span>
+      <span class="muted" data-ago="${Number(r.ts)||0}">${G(r.ts,s)}</span>
+      <span><a class="link mono" href="${R(r.sig)}" target="_blank" rel="noopener">${v(A(r.sig))}</a></span>
+    </div>`).join(""),c("receipts-empty").hidden=f.length>0,dt(f[0],i,s);let h=n.lattice&&n.lattice.tiers||[];if(h.length){let r=Z.latticeBalance,d=-1;h.forEach((m,w)=>{r!=null&&r>=Number(m.minLattice)&&(d=w)}),c("tier-rows").innerHTML=h.map((m,w)=>`<div class="tier${w===d?" active":""}">
+        <span class="hold">${Number(m.minLattice)===0?"no $LATTICE":"hold "+B(m.minLattice)+"+ $LATTICE"}</span>
+        <span class="sec-v">${D(m.sec)}<i>s between burns</i></span></div>`).join(""),c("tiers-note").textContent=n.lattice.mint?`tier is read from the launching wallet's balance of ${A(n.lattice.mint)} at launch and re-checked every tick`:"tier is read from the launching wallet at launch and re-checked every tick"}j()}function dt(e,n,t){let s=c("receipt-card");if(!e||!e.sig){s.hidden=!0;return}let i=Number(n&&n.burns);c("rc-no").textContent=i>0?"#"+D(i):"",c("rc-sym").textContent="$"+(e.symbol||""),c("rc-mint").textContent=A(e.mint),c("rc-sol").textContent=M(e.sol)+" SOL",c("rc-tokens").textContent=B(e.tokens);let a=c("rc-when");a.dataset.ago=String(Number(e.ts)||0),a.textContent=G(e.ts,t),a.title=e.ts?new Date(e.ts).toLocaleString():"",c("rc-sig").innerHTML=`<a href="${R(e.sig)}" target="_blank" rel="noopener">${v(A(e.sig))}</a>`,c("rc-solscan").href=R(e.sig);let o=`$${e.symbol} just burned ${B(e.tokens)} tokens with ${M(e.sol)} SOL of its own creator fees. Claim, buy, burn in one tx.
+
+${R(e.sig)}`;c("rc-share").href="https://x.com/intent/post?text="+encodeURIComponent(o),s.hidden=!1}function j(){if(!x.loaded)return;let e=x.now(),n=x.data.coins||[],t=null;for(let o of n)o.nextBurnAt&&(!t||o.nextBurnAt<t.nextBurnAt)&&(t=o);let s=c("next-burn-clock"),i=c("next-burn-sub"),a=c("next-burn-label");if(!t)s.textContent="--:--",s.classList.remove("hot"),a.textContent="next burn in",i.textContent="";else{let o=t.nextBurnAt-e;s.textContent=F(o),s.classList.toggle("hot",o<1e4);let l=k(t);a.textContent=o<=0?l?"timer due":"burning":"next burn in",i.textContent=`$${t.symbol} \xB7 ${l?"waiting for fees \xB7 "+z(t.pendingLamports)+" of 0.005 SOL":z(t.pendingLamports)+" SOL ready to burn"}`}for(let o of document.querySelectorAll("[data-cd]")){let l=x.byMint.get(o.dataset.cd);if(!l)continue;let u=(l.nextBurnAt||e)-e;(o.firstElementChild||o).textContent=F(u),o.classList.toggle("hot",u<1e4)}for(let o of document.querySelectorAll("[data-cdp]")){let l=x.byMint.get(o.dataset.cdp);l&&o.style.setProperty("--p",(I(l)*100).toFixed(1)+"%")}for(let o of document.querySelectorAll("[data-ago]"))o.textContent=G(Number(o.dataset.ago),e);if(g){for(let[o,l]of $){let u=g.cells.get(l),f=x.byMint.get(o);u&&f&&(u.progress=I(f),u.waiting=k(f))}g.cellsDirty=!0}}setInterval(j,1e3);let J=C();addEventListener("resize",()=>{C()!==J&&(J=C(),x.loaded&&Y(!1))},{passive:!0});let Z={provider:null,owner:null,latticeBalance:null,busy:!1,getProvider(){let e=window.phantom&&window.phantom.solana||(window.solana&&window.solana.isPhantom?window.solana:null);return e&&e.isPhantom?e:null},async connect(){let e=this.getProvider();if(!e)return!1;let n=await e.connect();return this.provider=e,this.owner=(n&&n.publicKey?n.publicKey:e.publicKey).toString(),c("lf-wallet-addr").textContent=A(this.owner),c("lf-wallet-addr").title=this.owner,e.on&&e.on("disconnect",()=>{this.owner=null,c("lf-wallet-addr").textContent="not connected",this.paintButton()}),this.paintButton(),!0},paintButton(){let e=c("lf-submit");if(!this.getProvider()){e.textContent="Install Phantom";return}e.textContent=this.owner?"Launch on pump.fun":"Connect Phantom"},step(e,n){let t=c("launch-steps");t.hidden=!1;for(let s of t.children)s.dataset.step===e?s.className=n:n==="active"&&s.className==="active"&&(s.className="done")},resetSteps(){for(let e of c("launch-steps").children)e.className="";c("launch-steps").hidden=!0},error(e){let n=c("lf-error");n.textContent=e,n.hidden=!1},async api(e,n,t){let s=await fetch(e,{method:"POST",body:t?n:JSON.stringify(n),headers:t?void 0:{"content-type":"application/json"}}),i=null;try{i=await s.json()}catch{}if(!s.ok||!i||!i.ok)throw new Error(i&&i.error||`${e} failed (${s.status})`);return i},async submit(e){if(e.preventDefault(),this.busy)return;if(c("lf-error").hidden=!0,!this.getProvider()){window.open("https://phantom.app/","_blank","noopener");return}if(!this.owner){try{await this.connect()}catch(u){this.error("Phantom did not connect: "+(u.message||u))}return}let n=c("lf-name").value.trim(),t=c("lf-symbol").value.trim().toUpperCase(),s=c("lf-desc").value.trim(),i=c("lf-image").files[0],a=parseFloat(c("lf-devbuy").value)||0,o=c("lf-twitter").value.trim();if(!n)return this.error("Name is required.");if(!t||!/^[A-Z0-9]{1,10}$/.test(t))return this.error("Ticker: 1\u201310 letters or digits.");if(!i)return this.error("Add an image.");if(i.size>5*1024*1024)return this.error("Image must be under 5 MB.");this.busy=!0;let l=c("lf-submit");l.disabled=!0,l.textContent="Launching\u2026",c("lf-success").hidden=!0,c("lf-burnwallet").hidden=!0,this.resetSteps();try{this.step("upload","active");let u=new FormData;u.append("name",n),u.append("symbol",t),u.append("description",s),u.append("image",i),o&&u.append("twitter",o),u.append("website",location.origin);let f=await this.api("/api/upload",u,!0);this.step("build","active");let h=await this.api("/api/build-create",{owner:this.owner,name:n,symbol:t,uri:f.uri,devBuySol:a||void 0});c("lf-burnwallet-addr").textContent=h.burnWallet,c("lf-burnwallet").hidden=!1,this.step("sign","active");let r=window.solanaWeb3;if(!r)throw new Error("Solana library did not load. Reload and try again.");let d=Uint8Array.from(atob(h.tx),S=>S.charCodeAt(0)),m=r.VersionedTransaction.deserialize(d),w=await this.provider.signAndSendTransaction(m),T=typeof w=="string"?w:w.signature;this.step("confirm","active");let mt=await this.api("/api/confirm-launch",{sig:T,mint:h.mint});this.step("confirm","done");let pt=mt.coin||{mint:h.mint,name:n,symbol:t},Q=c("lf-success-cell");Q.style.backgroundImage=f.image?`url("${f.image}")`:"",Q.textContent=f.image?"":t,c("lf-success-title").textContent=`$${t} is live`,c("lf-success-text").textContent=`Burn wallet ${A(h.burnWallet)} is the creator. First burn fires once fees reach 0.005 SOL and the ${pt.intervalSec||180} s timer is due.`,c("lf-success-solscan").href=R(T),c("lf-success-pump").href=O(h.mint),c("lf-success").hidden=!1,c("launch-form").reset(),c("lf-preview").hidden=!0,c("lf-drop-text").textContent="Drop an image or click to choose \xB7 PNG, JPG, GIF, WEBP",H.click(.7),x.poll&&fetch("/api/state",{cache:"no-store"}).then(S=>S.json()).then(S=>{if(S&&S.ok){x.apply(S);let W=$.get(h.mint);if(g&&W){let tt=g.cells.get(W);tt&&(tt.hot=2.5),g.spawn(...g.cellWorld(W),40,.8)}}}).catch(()=>{})}catch(u){let f=u&&u.message||String(u);this.error(/reject|denied|cancel/i.test(f)?"Signature cancelled in Phantom. Nothing was sent.":f);for(let h of c("launch-steps").children)h.className==="active"&&(h.className="")}finally{this.busy=!1,l.disabled=!1,this.paintButton()}},init(){this.paintButton(),c("launch-form").addEventListener("submit",l=>this.submit(l));let e=c("lf-drop"),n=c("lf-image"),t=c("lf-preview"),s=c("lf-drop-text"),i=l=>{l&&(t.src=URL.createObjectURL(l),t.hidden=!1,s.textContent=`${l.name} \xB7 ${(l.size/1024).toFixed(0)} KB`)};n.addEventListener("change",()=>i(n.files[0]));for(let l of["dragenter","dragover"])e.addEventListener(l,u=>{u.preventDefault(),e.classList.add("over")});for(let l of["dragleave","drop"])e.addEventListener(l,u=>{u.preventDefault(),e.classList.remove("over")});e.addEventListener("drop",l=>{let u=l.dataTransfer&&l.dataTransfer.files&&l.dataTransfer.files[0];if(u){let f=new DataTransfer;f.items.add(u),n.files=f.files,i(u)}}),c("lf-symbol").addEventListener("input",l=>{l.target.value=l.target.value.toUpperCase().replace(/[^A-Z0-9]/g,"").slice(0,10)});let a=0,o=setInterval(()=>{this.paintButton(),(this.getProvider()||++a>20)&&clearInterval(o)},250)}};it(),Z.init(),x.poll()})();})();</script>
+</body>
+</html>

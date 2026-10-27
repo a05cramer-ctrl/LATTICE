@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/tick.js": { "maxDuration": 60, "memory": 1024 },
+    "api/confirm-launch.js": { "maxDuration": 60 },
+    "api/build-create.js": { "maxDuration": 30 },
+    "api/upload.js": { "maxDuration": 30 },
+    "api/state.js": { "maxDuration": 10 },
+    "api/coin.js": { "maxDuration": 10 }
+  },
+  "crons": [
+    { "path": "/api/tick", "schedule": "* * * * *" }
+  ],
+  "headers": [
+    { "source": "/api/(.*)", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }] }
+  ]
+}
