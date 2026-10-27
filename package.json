@@ -4,7 +4,7 @@
   "private": true,
   "description": "LATTICE - pump.fun fee-burn launchpad (Vercel Node functions, CommonJS)",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "scripts": {
     "check": "node --check api/state.js && node --check api/coin.js && node --check api/upload.js && node --check api/build-create.js && node --check api/confirm-launch.js && node --check api/tick.js && node --check lib/pump.js && node --check lib/wallets.js && node --check lib/kv.js && node --check lib/rpc.js && node --check lib/tiers.js && node --check lib/http.js",
